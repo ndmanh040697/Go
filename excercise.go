@@ -1,3 +1,4 @@
+// sort slice alphabet
 package main
 
 import (

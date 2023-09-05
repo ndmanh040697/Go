@@ -2,8 +2,16 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"time"
 )
+
+func myFunction(a float64, b float64) (result_1, result_2 float64) {
+	result_1 = math.Sqrt(a)
+	result_2 = math.Sqrt(b)
+	return
+
+}
 
 func main() {
 	firstName := "Manh"
@@ -18,6 +26,7 @@ func main() {
 	fmt.Println(fullName)
 	fullName = firstName + "-" + firstName
 	fmt.Println(fullName)
+	fmt.Print(time.Now())
 
 	for i := 0; i < 10; i++ {
 		fmt.Println(i+1, fullName)
@@ -25,13 +34,13 @@ func main() {
 
 	for {
 		fmt.Println(i+1, fullName)
-		time.Sleep(time.Millisecond * 100)
 		i = i + 1
-		if i >= 10 {
+		if i >= 5 {
 			break
 
 		}
 
 	}
+	fmt.Println(myFunction(100, 25))
 
 }

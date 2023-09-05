@@ -1,3 +1,4 @@
+// input ten va call function
 package main
 
 import (
@@ -18,4 +19,3 @@ func getFullName(firstName, lastName string) string {
 	return "Hello I am" + " " + firstName + " " + lastName
 
 }
-
