@@ -25,7 +25,7 @@ func main() {
 }
 
 func getFullName(a, b string, c student) string {
-	return c.FirstName + c.LastName
+	return c.FirstName + " " + c.LastName
 
 }
 func setName(a, b string, c student) student {
