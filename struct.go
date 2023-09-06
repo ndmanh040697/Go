@@ -1,6 +1,8 @@
 // getFullName
 package main
 
+import "fmt"
+
 type student struct {
 	FirstName string
 	LastName  string
@@ -17,11 +19,17 @@ func main() {
 		Grade:     9,
 		ClassName: "HHM",
 	}
-	println(getInfo(manh.FirstName, manh.LastName, manh))
+	fmt.Println(getFullName(manh.FirstName, manh.LastName, manh))
+	fmt.Println(setName("Nhi", "Nguyen", manh))
 
 }
 
-func getInfo(a, b string, c student) string {
+func getFullName(a, b string, c student) string {
 	return c.FirstName + c.LastName
 
+}
+func setName(a, b string, c student) student {
+	c.FirstName = a
+	c.LastName = b
+	return c
 }
