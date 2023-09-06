@@ -9,6 +9,7 @@ import (
 
 func main() {
 	var name = []string{}
+/* cach 1: input lenght of Slice */
 	// fmt.Print("Enter len: ")
 	// var n int
 	// fmt.Scanf("%d", &n)
@@ -19,14 +20,14 @@ func main() {
 	// 	name = append(name, input)
 	// 	i += 1
 	// }
-
+/* Cach 2: input into Slice */
 	for {
 		var input string
 		fmt.Print("inputName=")
 		fmt.Scan(&input)
 		name = append(name, input)
 
-		if input == "start" {
+		if input == " " {
 			break
 		}
 	}
