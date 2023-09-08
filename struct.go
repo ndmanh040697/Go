@@ -14,7 +14,6 @@ type student struct {
 func main() {
 	slice := []int{1, 2, 3, 5, 2, 23, 56}
 	slice1 := []int{12, 32, 4, 5, 3, 2, 13, 3}
-	fmt.Println()
 	manh := student{
 		FirstName: "Manh",
 		LastName:  "Nguyen",
@@ -23,7 +22,8 @@ func main() {
 		ClassName: "HHM",
 	}
 	fmt.Println(getFullName(manh.FirstName, manh.LastName, manh))
-	fmt.Println(setName("Nhi", "Nguyen", manh))
+	setName("Nhi", "Le", manh)
+	fmt.Println(manh)
 	// fmt.Println("Add element to the end of slice", addEndSlice(slice, 8))
 	// fmt.Println("Add element to the start of slice", addStartSlice(slice, 8))
 	// fmt.Println("Remove element in slice", removeElement(slice, 2))
@@ -41,10 +41,9 @@ func getFullName(a, b string, c student) string {
 }
 
 // BTVN 4
-func setName(a, b string, c student) student {
+func setName(a, b string, c student) {
 	c.FirstName = a
 	c.LastName = b
-	return c
 }
 
 // BTVN 5
