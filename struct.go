@@ -13,6 +13,7 @@ type student struct {
 
 func main() {
 	slice := []int{1, 2, 3, 5, 2, 23, 56}
+	slice1 := []int{12, 32, 4, 5, 3, 2, 13, 3}
 	fmt.Println()
 	manh := student{
 		FirstName: "Manh",
@@ -26,7 +27,8 @@ func main() {
 	// fmt.Println("Add element to the end of slice", addEndSlice(slice, 8))
 	// fmt.Println("Add element to the start of slice", addStartSlice(slice, 8))
 	// fmt.Println("Remove element in slice", removeElement(slice, 2))
-	fmt.Println("Insert element in slice", insertElement(slice, 3, 84))
+	// fmt.Println("Insert element in slice", insertElement(slice, 3, 84))
+	fmt.Println("Add slice:", addSlice(slice, slice1))
 
 }
 
@@ -63,8 +65,12 @@ func removeElement(a []int, b int) []int {
 func insertElement(a []int, b int, c int) []int {
 	d := a
 	d = append(d[:b], c)
-	fmt.Println("Slice d:",d)
-	fmt.Println("Slice a:",a)
+	fmt.Println("Slice d:", d)
+	fmt.Println("Slice a:", a)
 	// a = append(d, a[b:]...)
 	return a
+}
+
+func addSlice(a []int, b []int) []int {
+	return append(a, b...)
 }
