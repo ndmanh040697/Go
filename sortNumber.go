@@ -29,8 +29,8 @@ func main() {
 	// fmt.Println(bubbleSort(slice))
 
 	a := []int{1, 4, 7, 2, 3, 8, 5, 9, 6}
-	fmt.Println(bubbleSort(a))
-	fmt.Println(mergeSort(a))
+	fmt.Println("Bubble Sort:", bubbleSort(a))
+	// fmt.Println("Merge Sort:", mergeSort(a))
 }
 
 func bubbleSort(a []int) []int {
