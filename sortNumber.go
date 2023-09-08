@@ -33,6 +33,7 @@ func main() {
 	// fmt.Println("Merge Sort:", mergeSort(a))
 }
 
+// BTVN 2
 func bubbleSort(a []int) []int {
 	for i := 0; i < (len(a) - 2); i++ {
 		for j := 0; j < len(a)-1; j++ {
