@@ -2,7 +2,7 @@
 package main
 
 import (
-	"app/model"
+	"app/Go/payload"
 	"fmt"
 )
 
@@ -16,24 +16,14 @@ func main() {
 	// 	Grade:     9,
 	// 	ClassName: "HHM",
 	// }
-	eric := model.Student{}
-	JSONString := `{"FirstName":"Eric","ho":"Nguyen","tuoi":27,"Grade":12,"ClassName":"12A11"}`
+	eric := payload.Student{}
+	JSONString := `{"FirstName":"Eric","ho":"Nguyen","tuoi":0,"Grade":0,"ClassName":""}`
 	eric.FromJson(JSONString)
-	model.FromJsonNormal(JSONString, &eric)
-	fmt.Println(eric)
 
-	// fmt.Println(getFullName(manh.FirstName, manh.LastName, manh))
-	// manh.SetName("Nhi", "Le")
-	// fmt.Println(manh)
-	// fmt.Println(manh.ToJson())
+	v := eric.ToModel()
 
-	// fmt.Println("Add element to the end of slice", addEndSlice(slice, 8))
-	// fmt.Println("Add element to the start of slice", addStartSlice(slice, 8))
-	// fmt.Println("Remove element in slice", removeElement(slice, 2))
-	// fmt.Println("Insert element in slice", insertElement(slice, 3, 84))
-	// fmt.Println("Add slice:", addSlice(slice, slice1))
-	// fmt.Println("Receiver func get full name of Student: ", manh.ReceiverGetFullName())
-	// fmt.Println("Receiver func get first name of Student: ", manh.ReceiverGetFirstName())
+	s := v.ToJson()
+	fmt.Println(s)
 
 }
 

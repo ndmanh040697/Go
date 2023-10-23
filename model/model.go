@@ -3,14 +3,16 @@ package model
 import (
 	"encoding/json"
 	"log"
+	"time"
 )
 
 type Student struct {
-	FirstName string
-	LastName  string `json:"ho"`
-	Age       int    `json:"tuoi"`
-	Grade     float32
-	ClassName string
+	FirstName    string    `json:"first_name"`
+	LastName     string    `json:"last_name"`
+	Age          int       `json:"age,omitempty”`
+	Grade        float32   `json:"grade,omitempty”`
+	ClassName    string    `json:"class_name,omitemty"`
+	EntranceDate time.Time `json:"entrance_date"`
 }
 
 func (b Student) ReceiverGetFullName() string {
@@ -35,19 +37,4 @@ func (c *Student) ToJson() string {
 
 	}
 	return string(bs)
-}
-
-func (c *Student) FromJson(a string) {
-	err := json.Unmarshal([]byte(a), c)
-	if err != nil {
-		log.Fatalln(err)
-	}
-}
-
-func FromJsonNormal(a string, c *Student) {
-	err := json.Unmarshal([]byte(a), c)
-	if err != nil {
-		log.Fatalln(err)
-	}
-
 }
